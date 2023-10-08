@@ -38,7 +38,7 @@ body {
   color: #000;
   line-height: 1;
   font-family: "Rustic Printed Stamp";
-  font-size: 5.25rem;
+  font-size: 1.125rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -82,6 +82,12 @@ h6 {
   font-size: inherit;
 }
 
+body {
+  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: #282828;
+  background-size: 16px 16px;
+}
+
 .wrapper {
   min-height: 100%;
   display: flex;
@@ -104,4 +110,10 @@ h6 {
   max-width: 103.125rem;
   box-sizing: content-box;
   margin: auto;
+}
+
+[class*=__container] {
+  max-width: 103.125rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
 }
