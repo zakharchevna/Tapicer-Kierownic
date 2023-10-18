@@ -1,57 +1,70 @@
-// .header {
-//   // position: fixed;
-// 	// top: 0;
-// 	// left: 0;
-// 	width: 100%;
-// 	// z-index: 50;
-// 	transition: all 0.3s ease 0s;
-// 	@include adaptiveValue("padding-top", 60, 16);
-// 	@include adaptiveValue("padding-bottom", 60, 16);
-//   &__container {
-//     display: grid;
-// 		grid-template-columns: rem(300) 1fr;
-// 		align-items: center;
-// 		@media (max-width: em(1080)) {
-// 			grid-template-columns: auto 1fr;
-// 		}
-//   }
+.header {
+  // position: fixed;
+	// top: 0;
+	// left: 0;
+	// width: 100%;
+	// z-index: 50;
+	transition: all 0.3s ease 0s;
+	@include adaptiveValue("padding-top", 60, 16);
+	@include adaptiveValue("padding-bottom", 60, 16);
+  &__container {
+    display: grid;
+		grid-template-columns: rem(300) 1fr;
+		align-items: center;
+		@media (max-width: em(1080)) {
+			grid-template-columns: auto 1fr;
+		}
 
-//   &__logo {
-//     // position: relative;
-// 		// z-index: 5;
-// 		@include adaptiveValue("width", 143, 120, 1620, 768, 1);
-// 		// & img {
-// 		// 	max-width: 100%;
-// 		// }
-//   }
-
-// }
-// .menu {
-//   padding: 0 rem(10);
-
-//   &__list {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content:center;
-//     align-items: center;
-//     row-gap: rem(10);
-//     @include adaptiveValue("column-gap", 44, 16);
-//     // @media (max-width:$mobile){
-//     //   flex-direction: column;
-//     //   text-align: center;
-//     //   row-gap: rem(30);
-//     // }
-//   }
+    @media (max-width: $mobile) {
+      place-items: center;
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+    }
+  }
+  &__logo {
+    color: $accentColor;
+    font-size: rem(42);
+    // position: relative;
+    // z-index: 5;
+    // @include adaptiveValue("width", 143, 120, 1620, 768, 1);
+    // & img {
+    //   max-width: 100%;
+    // }
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentHover;
+      }
+    }
+  }
+}
+.menu {
+  padding: 0 rem(10);
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    row-gap: rem(10);
+    @include adaptiveValue("column-gap", 44, 16);
+    @media (max-width:$mobile){
+      // flex-direction: column;
+      text-align: center;
+      row-gap: rem(30);
+    }
+  }
   
-//   &__link {
-//     transition: color 0.3s ease 0s;
-//     @media (any-hover: hover) {
-//       &:hover {
-//         color: $accentColor;
-//       }
-//     }
-//     @media (max-width:$mobile){
-//       font-size: rem(40); 
-//     }
-//   }   
-// }
+  &__link {
+    font-size: rem(34);
+    color: $accentColor;
+    transition: color 0.3s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $accentHover;
+      }
+    }
+    @media (max-width:$mobile){
+      font-size: rem(40); 
+    }
+  }   
+}
+
