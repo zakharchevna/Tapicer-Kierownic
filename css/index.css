@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;700&display=swap");
 @font-face {
   font-display: swap;
   font-family: "Rustic Printed Stamp";
@@ -35,9 +36,9 @@ body {
 }
 
 body {
-  color: #000;
+  color: #0c8484;
   line-height: 1;
-  font-family: "Rustic Printed Stamp";
+  font-family: "M PLUS 1", sans-serif;
   font-size: 1.125rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -49,7 +50,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Rustic Printed Stamp";
+  font-family: "M PLUS 1", sans-serif;
   font-size: inherit;
 }
 
@@ -112,6 +113,19 @@ body {
   margin: auto;
 }
 
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 [class*=__container] {
   max-width: 103.125rem;
   margin: 0 auto;
@@ -119,6 +133,7 @@ body {
 }
 
 .header {
+  font-family: "Rustic Printed Stamp";
   transition: all 0.3s ease 0s;
 }
 @media (min-width: 103.125em) {
@@ -248,4 +263,145 @@ body {
   .menu__link {
     font-size: 2.5rem;
   }
+}
+
+.main-block__container {
+  display: grid;
+  grid-template-columns: 37.5757575758% 1fr;
+}
+.main-block__content {
+  font-weight: 700;
+  text-shadow: 1px 1px 4px #001b1b;
+}
+@media (min-width: 62em) {
+  .main-block__content {
+    padding-right: 6rem;
+  }
+}
+@media (min-width: 0.125em) and (max-width: 62em) {
+  @supports (padding-right: clamp( 1.875rem , 1.8666666667rem  +  6.6666666667vw , 6rem )) {
+    .main-block__content {
+      padding-right: clamp( 1.875rem , 1.8666666667rem  +  6.6666666667vw , 6rem );
+    }
+  }
+  @supports not (padding-right: clamp( 1.875rem , 1.8666666667rem  +  6.6666666667vw , 6rem )) {
+    .main-block__content {
+      padding-right: calc(1.875rem + 4.125 * (100vw - 0.125rem) / 61.875);
+    }
+  }
+}
+@media (max-width: 0.125em) {
+  .main-block__content {
+    padding-right: 1.875rem;
+  }
+}
+@media (min-width: 103.125em) {
+  .main-block__title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (font-size: clamp( 2.5rem , 2.1390977444rem  +  1.8045112782vw , 4rem )) {
+    .main-block__title {
+      font-size: clamp( 2.5rem , 2.1390977444rem  +  1.8045112782vw , 4rem );
+    }
+  }
+  @supports not (font-size: clamp( 2.5rem , 2.1390977444rem  +  1.8045112782vw , 4rem )) {
+    .main-block__title {
+      font-size: calc(2.5rem + 1.5 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .main-block__title {
+    font-size: 2.5rem;
+  }
+}
+@media (min-width: 103.125em) {
+  .main-block__title:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (margin-bottom: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem )) {
+    .main-block__title:not(:last-child) {
+      margin-bottom: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem )) {
+    .main-block__title:not(:last-child) {
+      margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .main-block__title:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+.main-block__description {
+  line-height: 1.18;
+}
+@media (min-width: 103.125em) {
+  .main-block__description {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (font-size: clamp( 1.25rem , 1.0695488722rem  +  0.9022556391vw , 2rem )) {
+    .main-block__description {
+      font-size: clamp( 1.25rem , 1.0695488722rem  +  0.9022556391vw , 2rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.25rem , 1.0695488722rem  +  0.9022556391vw , 2rem )) {
+    .main-block__description {
+      font-size: calc(1.25rem + 0.75 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .main-block__description {
+    font-size: 1.25rem;
+  }
+}
+@media (min-width: 103.125em) {
+  .main-block__description:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (margin-bottom: clamp( 1.875rem , 1.6043233083rem  +  1.3533834586vw , 3rem )) {
+    .main-block__description:not(:last-child) {
+      margin-bottom: clamp( 1.875rem , 1.6043233083rem  +  1.3533834586vw , 3rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 1.875rem , 1.6043233083rem  +  1.3533834586vw , 3rem )) {
+    .main-block__description:not(:last-child) {
+      margin-bottom: calc(1.875rem + 1.125 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .main-block__description:not(:last-child) {
+    margin-bottom: 1.875rem;
+  }
+}
+.media-main-block {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 2rem;
+}
+.media-main-block img {
+  max-width: 100%;
+}
+.slider__item-ibg {
+  border-radius: 4%;
+  width: 600px;
+  height: 600px;
+  background-color: #001b1b;
+  transform: rotate(30deg);
+}
+.slider__image {
+  overflow: hidden;
+  border-radius: 4%;
 }

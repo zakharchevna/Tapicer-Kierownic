@@ -4,6 +4,7 @@
 	// left: 0;
 	// width: 100%;
 	// z-index: 50;
+  font-family: "Rustic Printed Stamp";
 	transition: all 0.3s ease 0s;
 	@include adaptiveValue("padding-top", 60, 16);
 	@include adaptiveValue("padding-bottom", 60, 16);
