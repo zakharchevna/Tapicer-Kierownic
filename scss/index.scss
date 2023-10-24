@@ -66,17 +66,17 @@ body {
 	margin: auto;
 }
 
-[class*="-ibg"] {
-	position: relative;
-	img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		object-fit: cover;
-	}
-}
+// [class*="-ibg"] {
+// 	position: relative;
+// 	img {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 		object-fit: cover;
+// 	}
+// }
 
 @if ($responsiveType==1) {
 	[class*="__container"] {

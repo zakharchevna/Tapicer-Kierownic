@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@400;700&display=swap");
-@font-face {
-  font-display: swap;
-  font-family: "Rustic Printed Stamp";
-  src: url("../fonts/rustic-printed-stamp/FontsFree-Net-Rustic-Printed-Stamp.eot");
-  src: local("0"), url("../fonts/rustic-printed-stamp/FontsFree-Net-Rustic-Printed-Stamp.woff") format("woff"), url("../fonts/rustic-printed-stamp/FontsFree-Net-Rustic-Printed-Stamp.woff2") format("woff2"), url("../fonts/rustic-printed-stamp/FontsFree-Net-Rustic-Printed-Stamp.ttf") format("truetype"), url("../fonts/rustic-printed-stamp/FontsFree-Net-Rustic-Printed-Stamp.svg") format("svg");
-  font-weight: 400;
-  font-style: normal;
-}
 * {
   padding: 0px;
   margin: 0px;
@@ -113,19 +105,6 @@ body {
   margin: auto;
 }
 
-[class*=-ibg] {
-  position: relative;
-}
-[class*=-ibg] img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 [class*=__container] {
   max-width: 103.125rem;
   margin: 0 auto;
@@ -133,7 +112,7 @@ body {
 }
 
 .header {
-  font-family: "Rustic Printed Stamp";
+  font-weight: 700;
   transition: all 0.3s ease 0s;
 }
 @media (min-width: 103.125em) {
@@ -394,14 +373,44 @@ body {
 .media-main-block img {
   max-width: 100%;
 }
-.slider__item-ibg {
+.slider .slider__wrapper {
+  transform: rotate(45deg);
   border-radius: 4%;
-  width: 600px;
-  height: 600px;
-  background-color: #001b1b;
-  transform: rotate(30deg);
-}
-.slider__image {
+  position: relative;
+  padding-bottom: 98.4787018256%;
+  background-color: #23B123;
+  width: 98.4787018256%;
   overflow: hidden;
+}
+.slider .slider__image {
+  width: 100%;
+  height: 100%;
   border-radius: 4%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.tools-main-block__item {
+  left: 80px;
+  margin-bottom: 3.3333333333em;
+  transform: rotate(45deg);
+  border-radius: 4%;
+  position: relative;
+  padding-bottom: 220px;
+  background-color: #23B123;
+  width: 220px;
+  overflow: hidden;
+}
+.tools-main-block__item img {
+  width: 100%;
+  height: 100%;
+  border-radius: 4%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
