@@ -112,6 +112,11 @@ body {
 }
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
   font-weight: 700;
   transition: all 0.3s ease 0s;
 }
@@ -187,7 +192,7 @@ body {
 }
 
 .menu {
-  padding: 0 0.625rem;
+  padding: 5px 0.625rem;
 }
 .menu__list {
   display: flex;
@@ -244,6 +249,9 @@ body {
   }
 }
 
+.main-block {
+  padding-top: 12.5rem;
+}
 .main-block__container {
   display: grid;
   grid-template-columns: 37.5757575758% 1fr;
@@ -251,6 +259,28 @@ body {
 .main-block__content {
   font-weight: 700;
   text-shadow: 1px 1px 4px #001b1b;
+}
+@media (min-width: 103.125em) {
+  .main-block__content {
+    padding-top: 12.5rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (padding-top: clamp( 6.25rem , 4.7462406015rem  +  7.5187969925vw , 12.5rem )) {
+    .main-block__content {
+      padding-top: clamp( 6.25rem , 4.7462406015rem  +  7.5187969925vw , 12.5rem );
+    }
+  }
+  @supports not (padding-top: clamp( 6.25rem , 4.7462406015rem  +  7.5187969925vw , 12.5rem )) {
+    .main-block__content {
+      padding-top: calc(6.25rem + 6.25 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .main-block__content {
+    padding-top: 6.25rem;
+  }
 }
 @media (min-width: 62em) {
   .main-block__content {
@@ -377,9 +407,8 @@ body {
   transform: rotate(45deg);
   border-radius: 4%;
   position: relative;
-  padding-bottom: 98.4787018256%;
-  background-color: #23B123;
-  width: 98.4787018256%;
+  padding-bottom: 38.75rem;
+  width: 38.75rem;
   overflow: hidden;
 }
 .slider .slider__image {
@@ -394,13 +423,10 @@ body {
 }
 
 .tools-main-block__item {
-  left: 80px;
-  margin-bottom: 3.3333333333em;
   transform: rotate(45deg);
   border-radius: 4%;
   position: relative;
   padding-bottom: 220px;
-  background-color: #23B123;
   width: 220px;
   overflow: hidden;
 }
@@ -413,4 +439,16 @@ body {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.tools-main-block .tools-item__1 {
+  top: -10px;
+  left: -60px;
+}
+.tools-main-block .tools-item__2 {
+  top: -14px;
+  left: 100px;
+}
+.tools-main-block .tools-item__3 {
+  top: -28px;
+  left: -72px;
 }

@@ -1,5 +1,5 @@
 .main-block {
-
+padding-top: rem(200);
   // .main-block__container
 
   &__container {
@@ -11,6 +11,7 @@
   // .main-block__content
 
   &__content {
+    @include adaptiveValue("padding-top", 200, 100);
     @include adaptiveValue("padding-right", 96, 30, 1420, 992, 2);
     font-weight: 700;
     text-shadow: 1px 1px 4px #001b1b;
@@ -65,9 +66,8 @@
     transform: rotate(45deg);
     border-radius: 4%;
     position: relative;
-    padding-bottom: percent(971,986);
-    background-color: $accentColor;
-    width: percent(971,986);
+    padding-bottom: rem(620);
+    width: rem(620);
     overflow: hidden;
   }
 
@@ -87,13 +87,10 @@
   // .tools-main-block__item
 
   &__item {
-    left: 80px;
-    margin-bottom: em(60, 18);
     transform: rotate(45deg);
     border-radius: 4%;
     position: relative;
     padding-bottom: 220px;
-    background-color: $accentColor;
     width: 220px;
     overflow: hidden;
     & img {
@@ -105,5 +102,17 @@
       left: 0;
       object-fit: cover;
     }
+  }
+  .tools-item__1 {
+    top: -10px;
+    left: -60px;
+  }
+  .tools-item__2 {
+    top: -14px;
+    left: 100px;
+  }
+  .tools-item__3 {
+    top: -28px;
+    left: -72px;
   }
 }
