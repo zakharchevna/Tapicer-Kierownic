@@ -3,6 +3,7 @@ padding-top: rem(200);
   // .main-block__container
 
   &__container {
+    @include adaptiveValue("padding-top", 20, 10);
     display: grid;
 		grid-template-columns: percent(620, $containerWidth) 1fr;
 		// align-items: center;

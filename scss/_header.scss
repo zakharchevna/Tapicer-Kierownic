@@ -6,8 +6,8 @@
 	z-index: 50;
   font-weight: 700;
 	transition: all 0.3s ease 0s;
-	@include adaptiveValue("padding-top", 60, 16);
-	@include adaptiveValue("padding-bottom", 60, 16);
+	@include adaptiveValue("padding-top", 40, 16);
+	@include adaptiveValue("padding-bottom", 70, 16);
   &__container {
     display: grid;
 		grid-template-columns: rem(300) 1fr;
