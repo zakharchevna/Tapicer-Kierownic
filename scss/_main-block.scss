@@ -21,6 +21,7 @@ padding-top: rem(200);
   // .main-block__title
 
   &__title {
+    font-weight: 700;
     @include adaptiveValue("font-size", 64, 40);
       &:not(:last-child) {
         @include adaptiveValue("margin-bottom", 32, 16);

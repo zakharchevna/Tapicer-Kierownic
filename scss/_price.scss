@@ -1,13 +1,41 @@
 .price {
-
   // .price__container
 
   &__container {
+    @include adaptiveValue("padding-top", 100, 20);
+    @include adaptiveValue("padding-bottom", 100, 20);
+    display: grid;
+    @include adaptiveValue("gap", 80, 20);
+    & img {
+      max-width: 100%;
+    }
   }
 
+
+  h3 {
+    color: $accentColor;
+    @include adaptiveValue("font-size", 28, 18);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 32, 16);
+      }
+  }
+
+  h3 > span {
+    @include adaptiveValue("font-size", 28, 18);
+    color: yellow;
+  }
+
+  [class*="__price"] {
+    @include adaptiveValue("font-size", 42, 20);
+    color: $errorColor;
+    font-weight: 700;
+  }
   // .price__title
 
   &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 64, 40);
+    text-align: center;
   }
 
   // .price__step1
@@ -31,7 +59,11 @@
   }
 }
 .price-step1 {
-
+  & span {
+    font-size: rem(22);
+    font-weight: 700;
+    color: $body-bg;
+  }
   // .price-step1__title
 
   &__title {
@@ -40,11 +72,28 @@
   // .price-step1__items
 
   &__items {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(290px, 1fr));
+    gap: rem(80);
   }
 
   // .price-step1__item
 
   &__item {
+    border-radius: 5%;
+    padding: rem(30);
+    display: grid;
+    place-items: center;
+    // gap: rem(20);
+    & img {
+      filter: drop-shadow(2px 10px 4px rgba(0, 0, 0, 0.5));
+      width: rem(220);
+    }
+    background-color: #ffffffe7;
+    // &:hover {
+    //   border: 1px solid transparent;
+    //   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222), 3px 44px 54px rgba(0, 0, 0, 0.08);
+    // }
   }
 }
 .item-step1 {
@@ -57,11 +106,22 @@
   // .item-step1__description
 
   &__description {
+    line-height: 1.5;
+    &:not(:last-child) {
+      margin: rem(18) 0 rem(8) 0;
+    }
+  }
+
+  &__list li {
+    padding: rem(8) 0;
+    line-height: 1.5;
   }
 
   // .item-step1__price
 
   &__price {
+    text-shadow: 1px 1px 2px #000;
+    padding: rem(5) 0;
   }
 }
 .price-step2 {
