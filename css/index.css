@@ -802,7 +802,16 @@ body {
   width: 13.75rem;
 }
 
+.item-step1__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.item-step1__title:not(:last-child) {
+  margin-bottom: 1.125rem;
+}
 .item-step1__description {
+  font-size: 1.5rem;
+  font-weight: 700;
   line-height: 1.5;
 }
 .item-step1__description:not(:last-child) {
