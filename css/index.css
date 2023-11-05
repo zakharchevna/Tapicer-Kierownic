@@ -122,18 +122,18 @@ body {
 }
 @media (min-width: 103.125em) {
   .header {
-    padding-top: 2.5rem;
+    padding-top: 1.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 103.125em) {
-  @supports (padding-top: clamp( 1rem , 0.6390977444rem  +  1.8045112782vw , 2.5rem )) {
+  @supports (padding-top: clamp( 1rem , 0.9398496241rem  +  0.3007518797vw , 1.25rem )) {
     .header {
-      padding-top: clamp( 1rem , 0.6390977444rem  +  1.8045112782vw , 2.5rem );
+      padding-top: clamp( 1rem , 0.9398496241rem  +  0.3007518797vw , 1.25rem );
     }
   }
-  @supports not (padding-top: clamp( 1rem , 0.6390977444rem  +  1.8045112782vw , 2.5rem )) {
+  @supports not (padding-top: clamp( 1rem , 0.9398496241rem  +  0.3007518797vw , 1.25rem )) {
     .header {
-      padding-top: calc(1rem + 1.5 * (100vw - 20rem) / 83.125);
+      padding-top: calc(1rem + 0.25 * (100vw - 20rem) / 83.125);
     }
   }
 }
@@ -144,18 +144,18 @@ body {
 }
 @media (min-width: 103.125em) {
   .header {
-    padding-bottom: 4.375rem;
+    padding-bottom: 1.25rem;
   }
 }
 @media (min-width: 20em) and (max-width: 103.125em) {
-  @supports (padding-bottom: clamp( 1rem , 0.1879699248rem  +  4.0601503759vw , 4.375rem )) {
+  @supports (padding-bottom: clamp( 1rem , 0.9398496241rem  +  0.3007518797vw , 1.25rem )) {
     .header {
-      padding-bottom: clamp( 1rem , 0.1879699248rem  +  4.0601503759vw , 4.375rem );
+      padding-bottom: clamp( 1rem , 0.9398496241rem  +  0.3007518797vw , 1.25rem );
     }
   }
-  @supports not (padding-bottom: clamp( 1rem , 0.1879699248rem  +  4.0601503759vw , 4.375rem )) {
+  @supports not (padding-bottom: clamp( 1rem , 0.9398496241rem  +  0.3007518797vw , 1.25rem )) {
     .header {
-      padding-bottom: calc(1rem + 3.375 * (100vw - 20rem) / 83.125);
+      padding-bottom: calc(1rem + 0.25 * (100vw - 20rem) / 83.125);
     }
   }
 }
@@ -183,7 +183,7 @@ body {
 }
 .header__logo {
   color: #23B123;
-  font-size: 2.625rem;
+  font-size: 2.25rem;
 }
 @media (any-hover: hover) {
   .header__logo:hover {
@@ -234,7 +234,7 @@ body {
   }
 }
 .menu__link {
-  font-size: 2.125rem;
+  font-size: 1.625rem;
   color: #23B123;
   transition: color 0.3s ease 0s;
 }
@@ -250,7 +250,7 @@ body {
 }
 
 .main-block {
-  padding-top: 12.5rem;
+  padding-top: 11.25rem;
 }
 .main-block__container {
   display: grid;
