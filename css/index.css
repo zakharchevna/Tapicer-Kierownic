@@ -657,6 +657,7 @@ body {
   max-width: 100%;
 }
 .price h3 {
+  text-align: center;
   color: #23B123;
 }
 @media (min-width: 103.125em) {
@@ -683,18 +684,18 @@ body {
 }
 @media (min-width: 103.125em) {
   .price h3:not(:last-child) {
-    margin-bottom: 2rem;
+    margin-bottom: 2.625rem;
   }
 }
 @media (min-width: 20em) and (max-width: 103.125em) {
-  @supports (margin-bottom: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem )) {
+  @supports (margin-bottom: clamp( 1rem , 0.6090225564rem  +  1.954887218vw , 2.625rem )) {
     .price h3:not(:last-child) {
-      margin-bottom: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem );
+      margin-bottom: clamp( 1rem , 0.6090225564rem  +  1.954887218vw , 2.625rem );
     }
   }
-  @supports not (margin-bottom: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem )) {
+  @supports not (margin-bottom: clamp( 1rem , 0.6090225564rem  +  1.954887218vw , 2.625rem )) {
     .price h3:not(:last-child) {
-      margin-bottom: calc(1rem + 1 * (100vw - 20rem) / 83.125);
+      margin-bottom: calc(1rem + 1.625 * (100vw - 20rem) / 83.125);
     }
   }
 }
@@ -824,4 +825,60 @@ body {
 .item-step1__price {
   text-shadow: 1px 1px 2px #000;
   padding: 0.3125rem 0;
+}
+
+.price-step2__items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(290px, 1fr));
+  gap: 5rem;
+}
+.price-step2__item {
+  border-radius: 5%;
+  padding: 2.5rem;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.9058823529);
+}
+
+.item-step2__image {
+  width: 13.75rem;
+  height: 22.5rem;
+  filter: drop-shadow(2px 10px 4px rgba(0, 0, 0, 0.5));
+  border-radius: 15%;
+}
+.item-step2__description {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.item-step2__description:not(:last-child) {
+  margin: 1.125rem 0 0.5rem 0;
+}
+.price-step3__items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(290px, 1fr));
+  gap: 5rem;
+}
+.price-step3__item {
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  display: grid;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.9058823529);
+}
+
+.item-step3__image {
+  border-radius: 15%;
+}
+.item-step3__image:not(:last-child) {
+  margin-bottom: 1.875rem;
+}
+.item-step3__description {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.price-step4__description {
+  line-height: 1.5;
 }
