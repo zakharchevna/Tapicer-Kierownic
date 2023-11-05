@@ -1,5 +1,5 @@
 .header {
-  // background-color: #ffffffe7;
+  // background-color: #3c3838e7;
   position: fixed;
 	top: 0;
 	left: 0;
@@ -7,11 +7,11 @@
 	z-index: 50;
   font-weight: 700;
 	transition: all 0.3s ease 0s;
-	@include adaptiveValue("padding-top", 20, 16);
-	@include adaptiveValue("padding-bottom", 20, 16);
+	@include adaptiveValue("padding-top", 18, 12);
+	@include adaptiveValue("padding-bottom", 18, 12);
   &__container {
     display: grid;
-		grid-template-columns: rem(300) 1fr;
+		grid-template-columns: rem(600) 1fr;
 		align-items: center;
 		@media (max-width: em(1080)) {
 			grid-template-columns: auto 1fr;
@@ -25,7 +25,7 @@
   }
   &__logo {
     color: $accentColor;
-    font-size: rem(36);
+    font-size: rem(28);
     // position: relative;
     // z-index: 5;
     // @include adaptiveValue("width", 143, 120, 1620, 768, 1);
@@ -58,7 +58,7 @@
   }
   
   &__link {
-    font-size: rem(26);
+    font-size: rem(22);
     color: $accentColor;
     transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
