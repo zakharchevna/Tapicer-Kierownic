@@ -1,0 +1,155 @@
+.materials {
+
+  // .materials__container
+
+  &__container {
+    @include adaptiveValue("padding-top", 100, 20);
+    @include adaptiveValue("padding-bottom", 100, 20);
+  }
+
+  // .materials__title
+
+  &__title {
+    text-align: center;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 64, 24);
+    &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 50, 16);
+      }
+  }
+
+  &__images {
+    margin-bottom: rem(30);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(290px, 1fr));
+    // gap: rem(15);
+  }
+
+  &__description {
+    padding: rem(20);
+    line-height: 1.5;
+    font-size: rem(22);
+    background-color: #443d3de1;
+    color: #ebddddda;
+  }
+
+  // .materials__fabric
+
+  &__fabric {
+    margin-bottom: rem(40);
+  }
+
+  // .materials__threads
+
+  &__threads {
+  }
+}
+
+.materials-images {
+  &__item {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-direction: column;
+    padding: rem(15);
+    max-width: rem(600);
+    margin: auto;
+    & img {
+      flex: 1 1 auto;
+      max-width: 100%;
+      height: rem(300);
+    }
+    & figcaption {
+      line-height: 1.2;
+      background-color: #443d3de1;
+      color: #ebddddda;
+      padding: rem(15);
+      text-align: center;
+    }
+  }
+}
+// .materials-fabric {
+//     display: grid;
+//     grid-template-columns: repeat(2, minmax(290px, 1fr));
+//     gap: rem(52);
+  // .materials-fabric__item
+
+//   &__item {
+//     border-radius: 2%;
+//     padding: rem(50);
+//     background-color: $body-bg;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//   }
+// }
+.fabric-item {
+
+  // .fabric-item__image
+
+  // &__image {
+  //   position: relative;
+  //   width: rem(670);
+  //   padding-bottom: 75%;
+  //   &:not(:last-child) {
+  //     @include adaptiveValue("margin-bottom", 20, 16);
+  //   }
+  //   & img {
+  //     border-radius: 2%;
+  //     width: 100%;
+  //     height: 100%;
+  //     position: absolute;
+  //     top: 0;
+  //     left: 0;
+  //     object-fit: cover;
+  //   }
+  // }
+
+  // .fabric-item__content
+
+  // &__content {
+  //   color: #ebddddda;
+  //   text-align: center;
+  // }
+}
+.content-fabric-item {
+
+  // .content-fabric-item__title
+
+  // &__title {
+  //   line-height: 1.2;
+  //   text-align: center;
+  //   margin: auto;
+  //   max-width: 70%;
+  //   @include adaptiveValue("font-size", 34, 18);
+  //   &:not(:last-child) {
+  //       @include adaptiveValue("margin-bottom", 30, 16);
+  //     }
+  // }
+
+  // .content-fabric-item__label
+
+  // &__label {
+  //   margin-bottom: em(14, 22);
+  // }
+
+  // .content-fabric-item__list
+
+  &__list {
+  }
+
+  // .content-fabric-item__li
+
+  // &__li {
+  //   font-size: rem(22);
+  //   margin-bottom: em(10, 22);
+  //   line-height: 1.5;
+  // }
+}
+.materials-threads {
+
+  // .materials-threads__description
+
+  &__description {
+  }
+}
