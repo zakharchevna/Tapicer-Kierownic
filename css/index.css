@@ -633,18 +633,18 @@ body {
 }
 @media (min-width: 103.125em) {
   .price__container {
-    gap: 5rem;
+    gap: 3.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 103.125em) {
-  @supports (gap: clamp( 1.25rem , 0.3477443609rem  +  4.5112781955vw , 5rem )) {
+  @supports (gap: clamp( 1.25rem , 0.7988721805rem  +  2.2556390977vw , 3.125rem )) {
     .price__container {
-      gap: clamp( 1.25rem , 0.3477443609rem  +  4.5112781955vw , 5rem );
+      gap: clamp( 1.25rem , 0.7988721805rem  +  2.2556390977vw , 3.125rem );
     }
   }
-  @supports not (gap: clamp( 1.25rem , 0.3477443609rem  +  4.5112781955vw , 5rem )) {
+  @supports not (gap: clamp( 1.25rem , 0.7988721805rem  +  2.2556390977vw , 3.125rem )) {
     .price__container {
-      gap: calc(1.25rem + 3.75 * (100vw - 20rem) / 83.125);
+      gap: calc(1.25rem + 1.875 * (100vw - 20rem) / 83.125);
     }
   }
 }
@@ -685,18 +685,18 @@ body {
 }
 @media (min-width: 103.125em) {
   .price h3:not(:last-child) {
-    margin-bottom: 4.375rem;
+    margin-bottom: 3.125rem;
   }
 }
 @media (min-width: 20em) and (max-width: 103.125em) {
-  @supports (margin-bottom: clamp( 1rem , 0.1879699248rem  +  4.0601503759vw , 4.375rem )) {
+  @supports (margin-bottom: clamp( 1rem , 0.4887218045rem  +  2.5563909774vw , 3.125rem )) {
     .price h3:not(:last-child) {
-      margin-bottom: clamp( 1rem , 0.1879699248rem  +  4.0601503759vw , 4.375rem );
+      margin-bottom: clamp( 1rem , 0.4887218045rem  +  2.5563909774vw , 3.125rem );
     }
   }
-  @supports not (margin-bottom: clamp( 1rem , 0.1879699248rem  +  4.0601503759vw , 4.375rem )) {
+  @supports not (margin-bottom: clamp( 1rem , 0.4887218045rem  +  2.5563909774vw , 3.125rem )) {
     .price h3:not(:last-child) {
-      margin-bottom: calc(1rem + 3.375 * (100vw - 20rem) / 83.125);
+      margin-bottom: calc(1rem + 2.125 * (100vw - 20rem) / 83.125);
     }
   }
 }
@@ -766,6 +766,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(290px, 1fr));
   gap: 5rem;
+  row-gap: 3.125rem;
 }
 .price-step1__item {
   border-radius: 5%;
@@ -960,6 +961,7 @@ body {
   margin-bottom: 1.875rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(290px, 1fr));
+  gap: 0.9375rem;
 }
 .materials__description {
   padding: 1.25rem;
@@ -972,21 +974,22 @@ body {
   margin-bottom: 2.5rem;
 }
 .materials-images__item {
+  background-color: rgba(68, 61, 61, 0.8823529412);
+  height: 26.25rem;
   border: thin #c0c0c0 solid;
   display: flex;
   flex-direction: column;
-  padding: 0.9375rem;
-  max-width: 37.5rem;
+  padding: 1.5625rem;
+  max-width: 38.125rem;
   margin: auto;
 }
 .materials-images__item img {
-  flex: 1 1 auto;
   max-width: 100%;
   height: 18.75rem;
 }
 .materials-images__item figcaption {
+  flex: 1 1 auto;
   line-height: 1.2;
-  background-color: rgba(68, 61, 61, 0.8823529412);
   color: rgba(235, 221, 221, 0.8549019608);
   padding: 0.9375rem;
   text-align: center;
