@@ -1,5 +1,6 @@
 .footer {
-
+  background-image: url("/images/AdobeStock_159361310\ \(1\).jpeg");
+  background-size: cover;
   // .footer__container
 
   &__container {
@@ -9,7 +10,7 @@
     row-gap: 70px;
     column-gap: 20px;
     grid-template-columns: auto 1fr;
-    border-top: 1px solid #DEDFE1;
+    // border-top: 1px solid #DEDFE1;
   }
 
   // .footer__logo
