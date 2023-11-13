@@ -5,16 +5,17 @@
 $fontFamily: 'M PLUS 1', sans-serif;
 $fontSize: rem(20);
 
-$mainColor: #999b9b;
-$mainColor: #0c8484;
-$body-bg: #263238;
+$main-color: #8eadab;
+$body-bg: #324a48;
+$text-color: #ebebeb;
 $menu-bg: #49845fec;
-$accentColor: #23B123;
-$accentHover: #98e498;
+$items-text-color: #523017;
+$accent-color: #98e498;
+$price-item-bg: #ffffffe7;
+$price-color: #2e5c22;
+$modal-btn-bg: #587c76c1;
+$modal-bg: rgba(0, 0, 0, 0.5);
 $errorColor: rgba(250, 4, 4, 0.6);
-$image-bg: rgba(255, 255, 255, 0.05);
-$howIcons-bg: rgba(0, 128, 0, 0.1);
-$footerBorder: rgba(255, 255, 255, 0.42);
 
 $minWidth: 320;
 $maxWidth: 1920;
@@ -41,8 +42,6 @@ body {
 	// background-color:#282828;
 	// background-size:16px 16px;
 	// background-color: #ffe;
-	background-color: #fcfcfa;
-	background-color: #fcfcfa;
 	background-color: #324a48;
 
 	color: #ebebeb;

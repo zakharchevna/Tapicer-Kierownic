@@ -32,7 +32,7 @@
     }
   }
   &__logo {
-    color: #8eadab;
+    color: $main-color;
     font-size: rem(28);
     // position: relative;
     // z-index: 5;
@@ -42,14 +42,12 @@
     // }
     @media (any-hover: hover) {
       &:hover {
-        color: $accentHover;
+        color: $accent-color;
       }
     }
   }
 }
 .menu {
-	// background-color:#282828;
-  // opacity: 60%;
   padding: 5px rem(10);
   &__list {
     display: flex;
@@ -58,8 +56,7 @@
     align-items: center;
     row-gap: rem(10);
     @include adaptiveValue("column-gap", 44, 16);
-    @media (max-width:$mobile){
-      // flex-direction: column;
+    @media (max-width:$mobile) {
       text-align: center;
       row-gap: rem(30);
     }
@@ -67,11 +64,11 @@
   
   &__link {
     font-size: rem(22);
-    color: #8eadab;
+    color: $main-color;
     transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
-        color: $accentHover;
+        color: $accent-color;
       }
     }
     @media (max-width:$mobile){

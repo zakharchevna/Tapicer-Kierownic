@@ -76,8 +76,6 @@ h6 {
 }
 
 body {
-  background-color: #fcfcfa;
-  background-color: #fcfcfa;
   background-color: #324a48;
   color: #ebebeb;
 }
@@ -832,7 +830,6 @@ body {
   }
 }
 .price [class*=__price] {
-  color: #112e57;
   color: #2e5c22;
   text-shadow: 1px 1px 40px #98e498;
   font-weight: 700;
@@ -1248,8 +1245,7 @@ body {
 .materials-images__item figcaption {
   flex: 0 1 auto;
   line-height: 1.3;
-  color: #574011;
-  color: #241a05;
+  color: #523017;
   font-weight: 700;
   padding: 0.9375rem;
   text-align: center;

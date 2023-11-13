@@ -105,12 +105,11 @@ padding-top: rem(180);
     border-radius: 4%;
     top: -100px;
     left: -270px;
-    // background-color: $accentHover;
-    border: 4px solid #8eadab;
+    border: 4px solid $main-color;
   }
   
   .slider__wrapper {
-    border: 4px solid #8eadab;
+    border: 4px solid $main-color;
     // transform: rotate(45deg);
     border-radius: 3%;
     position: relative;
@@ -136,7 +135,7 @@ padding-top: rem(180);
   // .tools-main-block__item
 
   &__item {
-    border: 4px solid #8eadab;
+    border: 4px solid $main-color;
     // transform: rotate(45deg);
     border-radius: 4%;
     position: relative;

@@ -15,7 +15,7 @@
 
   h3 {
     text-align: center;
-    color: #8eadab;
+    color: $main-color;
     font-weight: 700;
     @include adaptiveValue("font-size", 30, 18);
     &:not(:last-child) {
@@ -23,16 +23,10 @@
       }
   }
 
-  // h3 > span {
-  //   @include adaptiveValue("font-size", 28, 18);
-  //   color: yellow;
-  // }
-
   [class*="__price"] {
     @include adaptiveValue("font-size", 42, 20);
-    color: #112e57;
-    color: #2e5c22;
-    text-shadow: 1px 1px 40px $accentHover;
+    color: $price-color;
+    text-shadow: 1px 1px 40px $accent-color;
     font-weight: 700;
   }
   // .price__title
@@ -67,12 +61,12 @@
   & span {
     @include adaptiveValue("font-size", 30, 18);
     font-weight: 700;
-    color: $accentHover;
+    color: $accent-color;
   }
   // .price-step1__title
 
   &__title {
-    color: $accentHover;
+    color: $accent-color;
   }
 
   // .price-step1__items
@@ -94,12 +88,11 @@
     place-items: center;
     // gap: rem(20);
     & img {
-      filter: drop-shadow(2px 10px 4px rgba(0, 0, 0, 0.5));
+      filter: drop-shadow(2px 10px 4px $modal-bg);
       width: rem(180);
     }
-    // color: #574011;
-    color: #523017; // - color cappucino!
-    background-color: #ffffffe7;
+    color: $items-text-color; // - color cappucino!
+    background-color: $price-item-bg;
     // &:hover {
     //   border: 1px solid transparent;
     //   box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222), 3px 44px 54px rgba(0, 0, 0, 0.08);
@@ -141,7 +134,6 @@
 
   &__price {
     margin-top: rem(18);
-    text-shadow: 1px 1px 2px #000;
     padding: rem(5) 0;
   }
 }
@@ -149,7 +141,7 @@
   & span {
     @include adaptiveValue("font-size", 30, 18);
     font-weight: 700;
-    color: $accentHover;
+    color: $accent-color;
   }
   // .price-step2__title
 
@@ -167,7 +159,7 @@
   // .price-step2__item
 
   &__item {
-    color: #574011;
+    color: $items-text-color;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222), 3px 44px 54px rgba(0, 0, 0, 0.08);
     border-radius: 4%;
     padding: rem(40);
@@ -194,7 +186,7 @@
     & span {
       display: block;
       text-align: center;
-      color: #574011;
+      color: $items-text-color;
       font-size: rem(24);
     }
     text-align: center;
@@ -216,7 +208,7 @@
   & span {
     @include adaptiveValue("font-size", 30, 18);
     font-weight: 700;
-    color: $accentHover;
+    color: $accent-color;
   }
   // .price-step3__title
 
@@ -234,13 +226,13 @@
   // .price-step3__item
 
   &__item {
-    color: #574011;
+    color: $items-text-color;
     box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222), 3px 44px 54px rgba(0, 0, 0, 0.08);
     border-radius: rem(20);
     padding: rem(40);
     display: grid;
     place-items: center;
-    background-color: #ffffffe7;
+    background-color: $price-item-bg;
   }
 }
 .item-step3 {
@@ -248,7 +240,7 @@
   // .item-step3__image
 
   &__image {
-    filter: drop-shadow(2px 10px 4px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(2px 10px 4px $modal-bg);
     border-radius: 15%;
     &:not(:last-child) {
       margin-bottom: rem(30);
@@ -269,7 +261,7 @@
   & span {
     @include adaptiveValue("font-size", 30, 18);
     font-weight: 700;
-    color: $accentHover;
+    color: $accent-color;
   }
   // .price-step4__title
 
@@ -280,20 +272,17 @@
 
   &__description {
     font-size: rem(24);
-    & span {
-      color: #2e5c22;
-    }
     .description {
       display: block;
       text-align: center;
-      color: #574011;
+      color: $items-text-color;
       font-size: rem(24);
       // font-weight: 400;
     }
     font-weight: 700;
     text-align: center;
-    background-color: #ffffffe7;
-    color: #574011;
+    background-color: $price-item-bg;
+    color: $items-text-color;
     border-radius: rem(20);
     // @include adaptiveValue("padding-top", 30, 18);
     // @include adaptiveValue("padding-bottom", 30, 18);
