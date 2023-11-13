@@ -91,12 +91,12 @@ padding-top: rem(180);
   
   &::before {
     content: "";
-    background-image: url("/images/tools.jpg");
+    background-image: url("/images/20231112201151_IMG_7205.JPG");
     background-size: 210px 230px;
     // transform: rotate(-45deg);
     background-repeat: no-repeat;
     // filter: grayscale(0.5);
-    // object-fit: fill;
+    object-fit: cover;
     position: absolute;
     width: 100%;
     height: 100%;
