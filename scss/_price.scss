@@ -4,7 +4,7 @@
 
   &__container {
     @include adaptiveValue("padding-top", 100, 20);
-    @include adaptiveValue("padding-bottom", 100, 50);
+    @include adaptiveValue("padding-bottom", 200, 50);
     display: grid;
     @include adaptiveValue("gap", 50, 20);
     & img {
@@ -97,7 +97,8 @@
       filter: drop-shadow(2px 10px 4px rgba(0, 0, 0, 0.5));
       width: rem(180);
     }
-    color: #574011;
+    // color: #574011;
+    color: #523017; // - color cappucino!
     background-color: #ffffffe7;
     // &:hover {
     //   border: 1px solid transparent;
