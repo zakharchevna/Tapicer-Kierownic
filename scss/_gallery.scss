@@ -13,15 +13,6 @@
 
   // .gallery__title
 
-  &__title {
-    text-align: center;
-    font-weight: 700;
-    @include adaptiveValue("font-size", 40, 20);
-    &:not(:last-child) {
-      @include adaptiveValue("marging-bottom", 50, 20);
-    }
-  }
-
   // .gallery__images
 
   &__images {

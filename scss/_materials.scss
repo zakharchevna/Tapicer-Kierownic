@@ -10,12 +10,6 @@
   // .materials__title
 
   &__title {
-    text-align: center;
-    font-weight: 700;
-    @include adaptiveValue("font-size", 40, 20);
-    &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 50, 16);
-      }
   }
 
   &__images {
@@ -28,7 +22,7 @@
   &__description {
     padding: rem(20);
     line-height: 1.5;
-    font-size: rem(22);
+    @include adaptiveValue("font-size", 22, 18);
   }
 
   // .materials__fabric

@@ -32,9 +32,6 @@
   // .price__title
 
   &__title {
-    font-weight: 700;
-    @include adaptiveValue("font-size", 40, 20);
-    text-align: center;
   }
 
   // .price__step1
@@ -58,15 +55,15 @@
   }
 }
 .price-step1 {
-  & span {
-    @include adaptiveValue("font-size", 30, 18);
-    font-weight: 700;
-    color: $accent-color;
-  }
   // .price-step1__title
 
   &__title {
     color: $accent-color;
+  }
+
+  & span {
+    @include adaptiveValue("font-size", 30, 18);
+    font-weight: 700;
   }
 
   // .price-step1__items
@@ -103,7 +100,7 @@
 
 
   &__title {
-    font-size: rem(24);
+    @include adaptiveValue('font-size', 24, 20);
     font-weight: 700;
     &:not(:last-child) {
       margin-bottom: rem(18);
@@ -117,7 +114,7 @@
   // .item-step1__description
 
   &__description {
-    font-size: rem(24);
+    @include adaptiveValue('font-size', 24, 20);
     font-weight: 700;
     line-height: 1.5;
     &:not(:last-child) {
@@ -165,7 +162,7 @@
     padding: rem(40);
     display: grid;
     place-items: center;
-    background-color: #ffffffe7;
+    background-color: $price-item-bg;
   }
 }
 .item-step2 {
@@ -176,23 +173,22 @@
     // filter: drop-shadow(14px 10px 6px rgba(0, 0, 0, 0.5));
     width: rem(160);
     height: rem(220);
-    filter: drop-shadow(5px 10px 4px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(5px 10px 4px $modal-bg);
     border-radius: 15%;
   }
 
   // .item-step2__description
 
   &__description {
+    @include adaptiveValue('font-size', 24, 20);
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5;
     & span {
       display: block;
       text-align: center;
       color: $items-text-color;
-      font-size: rem(24);
     }
-    text-align: center;
-    font-size: rem(24);
-    font-weight: 700;
-    line-height: 1.5;
     // &:not(:last-child) {
     //   margin: rem(18) 0 rem(8) 0;
     // }
@@ -254,13 +250,12 @@
       margin-bottom: rem(30);
     }
     font-weight: 700;
-    font-size: rem(24);
+    @include adaptiveValue('font-size', 24, 20);
   }
 }
 .price-step4 {
   & span {
     @include adaptiveValue("font-size", 30, 18);
-    font-weight: 700;
     color: $accent-color;
   }
   // .price-step4__title
@@ -271,15 +266,7 @@
   // .price-step4__description
 
   &__description {
-    font-size: rem(24);
-    .description {
-      display: block;
-      text-align: center;
-      color: $items-text-color;
-      font-size: rem(24);
-      // font-weight: 400;
-    }
-    font-weight: 700;
+    @include adaptiveValue('font-size', 24, 20);
     text-align: center;
     background-color: $price-item-bg;
     color: $items-text-color;
@@ -289,5 +276,12 @@
     // @include adaptiveValue("padding-bottom", 30, 18);
     padding: rem(30);
     line-height: 1.5;
+    .description {
+      display: block;
+      text-align: center;
+      color: $items-text-color;
+      // @include adaptiveValue('font-size', 24, 20);
+      // font-weight: 400;
+    }
   }
 }
