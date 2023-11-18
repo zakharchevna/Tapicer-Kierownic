@@ -8,6 +8,13 @@
 	// background-size:16px 16px;
   background-image: url("/images/AdobeStock_159361310\ \(1\).jpeg");
   background-size: cover;
+	// background:
+	// radial-gradient(black 15%, transparent 16%) 0 0,
+	// radial-gradient(black 15%, transparent 16%) 8px 8px,
+	// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	// radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	// background-color: #191818;
+	// background-size:16px 16px;
   position: fixed;
 	top: 0;
 	left: 0;
@@ -18,22 +25,36 @@
 	@include adaptiveValue("padding-top", 18, 12);
 	@include adaptiveValue("padding-bottom", 18, 12);
   &__container {
-    display: grid;
-		grid-template-columns: rem(600) 1fr;
-		align-items: center;
-		@media (max-width: em(1080)) {
-			grid-template-columns: auto 1fr;
-		}
+    // display: grid;
+		// grid-template-columns: rem(600) 1fr;
+		// align-items: center;
+		// @media (max-width: em(1080)) {
+		// 	grid-template-columns: auto 1fr;
+		// }
 
-    @media (max-width: $mobile) {
-      place-items: center;
-      grid-template-columns: 1fr;
-      row-gap: rem(30);
-    }
+    // @media (max-width: $mobile) {
+    //   place-items: center;
+    //   grid-template-columns: 1fr;
+    //   row-gap: rem(30);
+    // }
+    display: flex;
+    justify-content: space-between;
+    // min-height: rem(20);
+    align-items: center;
+    // padding-top: rem(10);
+    // padding-bottom: rem(10);
+    column-gap: rem(10);
+    row-gap: rem(10);
+      @media (max-width: $mobile) {
+        & {
+          flex-direction: column;
+          // min-height: 0;
+        }
+      }
   }
   &__logo {
     color: $main-color;
-    font-size: rem(28);
+    font-size: rem(23);
     // position: relative;
     // z-index: 5;
     // @include adaptiveValue("width", 143, 120, 1620, 768, 1);
@@ -48,31 +69,27 @@
   }
 }
 .menu {
-  padding: 5px rem(10);
+  padding: 5px;
   &__list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    // justify-content: flex-end;
     align-items: center;
-    row-gap: rem(10);
+    // row-gap: rem(10);
     @include adaptiveValue("column-gap", 44, 16);
     @media (max-width:$mobile) {
-      text-align: center;
-      row-gap: rem(30);
+      justify-content: center;
     }
   }
   
   &__link {
-    font-size: rem(22);
+    font-size: rem(18);
     color: $main-color;
     transition: color 0.3s ease 0s;
     @media (any-hover: hover) {
       &:hover {
         color: $accent-color;
       }
-    }
-    @media (max-width:$mobile){
-      font-size: rem(40); 
     }
   }   
 }
