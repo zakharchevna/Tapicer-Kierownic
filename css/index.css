@@ -799,7 +799,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
-  row-gap: 3.125rem;
 }
 @media (min-width: 103.125em) {
   .gallery__container {
@@ -845,21 +844,77 @@ body {
     padding-bottom: 1.875rem;
   }
 }
+@media (min-width: 103.125em) {
+  .gallery__container {
+    row-gap: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (row-gap: clamp( 0.3125rem , -0.3641917293rem  +  3.3834586466vw , 3.125rem )) {
+    .gallery__container {
+      row-gap: clamp( 0.3125rem , -0.3641917293rem  +  3.3834586466vw , 3.125rem );
+    }
+  }
+  @supports not (row-gap: clamp( 0.3125rem , -0.3641917293rem  +  3.3834586466vw , 3.125rem )) {
+    .gallery__container {
+      row-gap: calc(0.3125rem + 2.8125 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .gallery__container {
+    row-gap: 0.3125rem;
+  }
+}
 .gallery__images {
   display: grid;
+  grid-template-columns: 1fr;
   width: 100%;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
   align-items: stretch;
-  justify-content: center;
-  padding: 2rem;
+  align-items: center;
+}
+@media (min-width: 103.125em) {
+  .gallery__images {
+    gap: 2rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (gap: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem )) {
+    .gallery__images {
+      gap: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem );
+    }
+  }
+  @supports not (gap: clamp( 1rem , 0.7593984962rem  +  1.2030075188vw , 2rem )) {
+    .gallery__images {
+      gap: calc(1rem + 1 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .gallery__images {
+    gap: 1rem;
+  }
+}
+@media (min-width: 47.99875em) {
+  .gallery__images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 61.99875em) {
+  .gallery__images {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1760px) {
+  .gallery__images {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 .gallery__image {
   width: 100%;
   transition: transform 1s ease;
   border-radius: 3%;
   border: 4px solid #8eadab;
-  width: 23.75rem;
   position: relative;
   padding-bottom: 97%;
 }
