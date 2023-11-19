@@ -58,7 +58,7 @@
     // width: rem(380);
     // width: 80vw;
     position: relative;
-    padding-bottom: 97%;
+    padding-bottom: 95%;
     &:hover img {
       transform: scale(1.1);
     // box-shadow: 5px 5px 25px #045454;
@@ -103,8 +103,8 @@
     // height: calc(100vh - 100px);
     display: grid;
     grid-template-columns: auto 1fr auto;
-    @include adaptiveValue("margin", 50, 2);
-    margin: 3rem;
+    // @include adaptiveValue("margin", 50, 2);
+    // margin: 3rem;
   }
 
   .modal figure {

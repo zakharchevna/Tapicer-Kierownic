@@ -15,14 +15,20 @@
   &__images {
     margin-bottom: rem(30);
     display: grid;
-    grid-template-columns: repeat(3, minmax(290px, 1fr));
-    gap: rem(25);
+    grid-template-columns: 1fr;
+    @include adaptiveValue("gap", 25, 10);
+    @media(min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(min-width: $tablet) {
+      grid-template-columns: repeat(3, minmax(290px, 1fr));
+    }
   }
 
   &__description {
-    padding: rem(20);
+    @include adaptiveValue("padding", 20, 10);
     line-height: 1.5;
-    @include adaptiveValue("font-size", 22, 18);
+    @include adaptiveValue("font-size", 22, 17);
   }
 
   // .materials__fabric

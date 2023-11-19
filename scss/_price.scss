@@ -6,7 +6,7 @@
     @include adaptiveValue("padding-top", 100, 20);
     @include adaptiveValue("padding-bottom", 200, 50);
     display: grid;
-    @include adaptiveValue("gap", 50, 20);
+    @include adaptiveValue("gap", 50, 10);
     & img {
       max-width: 100%;
     }
@@ -17,9 +17,9 @@
     text-align: center;
     color: $main-color;
     font-weight: 700;
-    @include adaptiveValue("font-size", 30, 18);
+    @include adaptiveValue("font-size", 30, 20);
     &:not(:last-child) {
-        @include adaptiveValue("margin-bottom", 40, 16);
+        @include adaptiveValue("margin-bottom", 40, 15);
       }
   }
 
@@ -70,9 +70,15 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(3, minmax(290px, 1fr));
-    gap: rem(80);
-    row-gap: rem(50);
+    grid-template-columns: 1fr;
+    @include adaptiveValue("column-gap", 80, 20);
+    @include adaptiveValue("row-gap", 50, 20);
+    @media(min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(min-width: $tablet) {
+      grid-template-columns: repeat(3, minmax(290px, 1fr));
+    }
   }
 
   // .price-step1__item
@@ -80,7 +86,7 @@
   &__item {
     // box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.03), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0227778), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0182222), 0px 20px 13px rgba(0, 0, 0, 0.015), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.0117778), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00722222), 3px 44px 54px rgba(0, 0, 0, 0.08);
     border-radius: 4%;
-    padding: rem(30);
+    @include adaptiveValue("padding", 30, 15);
     display: grid;
     place-items: center;
     // gap: rem(20);
@@ -103,7 +109,7 @@
     @include adaptiveValue('font-size', 24, 20);
     font-weight: 700;
     &:not(:last-child) {
-      margin-bottom: rem(18);
+      @include adaptiveValue('margin-bottom', 18, 10);
     }
   }
   // .item-step1__image
@@ -117,13 +123,16 @@
     @include adaptiveValue('font-size', 24, 20);
     font-weight: 700;
     line-height: 1.5;
+    // padding: rem(8) rem(5);
     &:not(:last-child) {
       margin: rem(18) 0 0 0;
     }
   }
 
   &__list li {
-    padding: rem(8) 0;
+    @include adaptiveValue('font-size', 20, 17);
+    padding: rem(5);
+    margin: rem(10);
     line-height: 1.5;
   }
 
@@ -149,8 +158,14 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(3, minmax(290px, 1fr));
-    gap: rem(80);
+    grid-template-columns: 1fr;
+    @include adaptiveValue("gap", 80, 20);
+    @media(min-width: $mobile) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media(min-width: $tablet) {
+      grid-template-columns: repeat(3, minmax(290px, 1fr));
+    }
   }
 
   // .price-step2__item
@@ -171,8 +186,8 @@
 
   &__image {
     // filter: drop-shadow(14px 10px 6px rgba(0, 0, 0, 0.5));
-    width: rem(160);
-    height: rem(220);
+    @include adaptiveValue('width', 160, 100);
+    @include adaptiveValue('height', 220, 160);
     filter: drop-shadow(5px 10px 4px $modal-bg);
     border-radius: 15%;
   }
@@ -180,7 +195,7 @@
   // .item-step2__description
 
   &__description {
-    @include adaptiveValue('font-size', 24, 20);
+    @include adaptiveValue('font-size', 24, 17);
     text-align: center;
     font-weight: 700;
     line-height: 1.5;
@@ -215,8 +230,11 @@
 
   &__items {
     display: grid;
-    grid-template-columns: repeat(2, minmax(290px, 1fr));
-    gap: rem(80);
+    grid-template-columns: 1fr;
+    @include adaptiveValue("gap", 80, 20);
+    @media(min-width: $mobile) {
+      grid-template-columns: repeat(2, minmax(290px, 1fr));
+    }
   }
 
   // .price-step3__item
@@ -250,7 +268,7 @@
       margin-bottom: rem(30);
     }
     font-weight: 700;
-    @include adaptiveValue('font-size', 24, 20);
+    @include adaptiveValue('font-size', 24, 17);
   }
 }
 .price-step4 {
@@ -266,7 +284,7 @@
   // .price-step4__description
 
   &__description {
-    @include adaptiveValue('font-size', 24, 20);
+    @include adaptiveValue('font-size', 24, 17);
     text-align: center;
     background-color: $price-item-bg;
     color: $items-text-color;
