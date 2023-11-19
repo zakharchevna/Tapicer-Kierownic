@@ -93,22 +93,26 @@
   }
 
   .modalInner {
+    // padding: rem(10);
     border-radius: 4px;
     background: $modal-btn-bg;
     box-shadow: 0 0 10px 10px $modal-bg;
     transform: translateY(-100vh);
     transition: all 0.5s;
-    max-width: 1000px;
-    height: calc(100vh - 100px);
+    // max-width: 1000px;
+    // height: calc(100vh - 100px);
     display: grid;
-    grid-template-columns: 50px 1fr 50px;
+    grid-template-columns: auto 1fr auto;
+    @include adaptiveValue("margin", 50, 2);
     margin: 3rem;
   }
 
   .modal figure {
     position: relative;
-    padding-bottom: 88%;
-    width: rem(850);
+    padding-bottom: 95%;
+    // width: rem(850);
+    @include adaptiveValue("width", 850, 270);
+    // width: 90vw;
     border-radius: 3%;
     margin: 0;
   }

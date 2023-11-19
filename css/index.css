@@ -955,18 +955,59 @@ body {
   box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.5);
   transform: translateY(-100vh);
   transition: all 0.5s;
-  max-width: 1000px;
-  height: calc(100vh - 100px);
   display: grid;
-  grid-template-columns: 50px 1fr 50px;
+  grid-template-columns: auto 1fr auto;
   margin: 3rem;
+}
+@media (min-width: 103.125em) {
+  .gallery .modalInner {
+    margin: 3.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (margin: clamp( 0.125rem , -0.5968045113rem  +  3.6090225564vw , 3.125rem )) {
+    .gallery .modalInner {
+      margin: clamp( 0.125rem , -0.5968045113rem  +  3.6090225564vw , 3.125rem );
+    }
+  }
+  @supports not (margin: clamp( 0.125rem , -0.5968045113rem  +  3.6090225564vw , 3.125rem )) {
+    .gallery .modalInner {
+      margin: calc(0.125rem + 3 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .gallery .modalInner {
+    margin: 0.125rem;
+  }
 }
 .gallery .modal figure {
   position: relative;
-  padding-bottom: 88%;
-  width: 53.125rem;
+  padding-bottom: 95%;
   border-radius: 3%;
   margin: 0;
+}
+@media (min-width: 103.125em) {
+  .gallery .modal figure {
+    width: 53.125rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 103.125em) {
+  @supports (width: clamp( 16.875rem , 8.1531954887rem  +  43.6090225564vw , 53.125rem )) {
+    .gallery .modal figure {
+      width: clamp( 16.875rem , 8.1531954887rem  +  43.6090225564vw , 53.125rem );
+    }
+  }
+  @supports not (width: clamp( 16.875rem , 8.1531954887rem  +  43.6090225564vw , 53.125rem )) {
+    .gallery .modal figure {
+      width: calc(16.875rem + 36.25 * (100vw - 20rem) / 83.125);
+    }
+  }
+}
+@media (max-width: 20em) {
+  .gallery .modal figure {
+    width: 16.875rem;
+  }
 }
 .gallery .modal img {
   position: absolute;
