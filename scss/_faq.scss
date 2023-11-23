@@ -1,0 +1,87 @@
+.faq {
+
+  &__container {
+      display: grid;
+      grid-template-columns: 1fr;
+      row-gap: rem(30);
+      @include adaptiveValue("padding-bottom", 100, 25);
+      @include adaptiveValue("padding-top", 100, 25);
+      // @media (max-width:$tablet) {
+      //   flex-direction: column-reverse;
+      // }
+  }
+
+  // &__content {
+  //     @media (min-width:$tablet){
+  //       @include adaptiveValue("padding-left", 126, 30, 1420, 992, 2);
+  //     }
+  // }
+
+  &__title {
+      &:not(:last-child) {
+        @include adaptiveValue("margin-bottom", 40, 20);
+      }
+  }
+
+  // &__description {
+  //   line-height: 1.4;
+  //     &:not(:last-child) {
+  //       @include adaptiveValue("margin-bottom", 48, 30);
+  //     }
+  // }
+
+  &__spollers {
+      display: grid;
+      gap: rem(24);
+  }
+  .spollers-faq {
+
+      &__item {
+        background-color: $main-color;
+        border-radius: rem(10);
+        overflow: hidden;
+      }
+
+      &__title {
+        font-weight: 700;
+        color: $body-bg;
+        text-align: left;
+        @include adaptiveValue("font-size", 24, 18);
+        line-height: math.div(42 , 24);
+        display: block;
+        width: 100%;
+        padding: rem(24) rem(30);
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        justify-content: space-between;
+        &::after {
+            content: "";
+            transition: transform 0.3s ease 0s;
+            background: url("/images/SVG/spoller-arrow.svg") center / 100% no-repeat;
+            flex: 0 0 rem(24);
+            height: rem(24);
+        }
+        &._spoller-active {
+            &::after {
+              transform: rotate(180deg);
+            }
+        }
+        @media (max-width:$mobileSmall){
+            padding: rem(18) rem(20);
+            line-height: 1.3;
+        }
+      }
+
+      &__body {
+        text-align: left;
+        @include adaptiveValue("font-size", 24, 17);
+        line-height: 1.3;
+        color: $body-bg;
+        padding: rem(0) rem(30) rem(24) rem(30);
+        @media (max-width:$mobileSmall){
+            padding: rem(0) rem(20) rem(18) rem(20);
+        }
+      }
+  }
+}

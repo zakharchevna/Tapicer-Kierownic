@@ -4,7 +4,7 @@
 
   &__container {
     @include adaptiveValue("padding-top", 100, 20);
-    @include adaptiveValue("padding-bottom", 200, 50);
+    @include adaptiveValue("padding-bottom", 100, 50);
     display: grid;
     @include adaptiveValue("gap", 50, 10);
     & img {
@@ -24,7 +24,7 @@
   }
 
   [class*="__price"] {
-    @include adaptiveValue("font-size", 42, 20);
+    @include adaptiveValue("font-size", 42, 24);
     color: $price-color;
     text-shadow: 1px 1px 40px $accent-color;
     font-weight: 700;
@@ -32,6 +32,9 @@
   // .price__title
 
   &__title {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 5, 1);
+    }
   }
 
   // .price__step1
@@ -92,7 +95,7 @@
     // gap: rem(20);
     & img {
       filter: drop-shadow(2px 10px 4px $modal-bg);
-      width: rem(180);
+      width: rem(170);
     }
     color: $items-text-color; // - color cappucino!
     background-color: $price-item-bg;
@@ -222,9 +225,6 @@
     color: $accent-color;
   }
   // .price-step3__title
-
-  &__title {
-  }
 
   // .price-step3__items
 

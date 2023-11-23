@@ -8,16 +8,20 @@
     padding-top: 40px;
     padding-bottom: 30px;
     display: grid;
-    row-gap: 70px;
+    margin: auto;
+    @include adaptiveValue("row-gap", 70, 26);
     column-gap: 20px;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
+    @media(min-width: $mobile) {
+      grid-template-columns: auto 1fr;
+    }
   }
 
   // .footer__logo
 
   &__logo {
     // font-weight: 700;
-    font-size: rem(26);
+    @include adaptiveValue("font-size", 26, 17);
     &:hover {
       color: $text-color;
     }
