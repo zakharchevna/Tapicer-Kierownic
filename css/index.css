@@ -922,6 +922,11 @@ body {
   transform: scale(1.1);
   box-shadow: 5px 5px 25px #8eadab;
 }
+@media (max-width: 425px) {
+  .gallery__image {
+    display: none;
+  }
+}
 .gallery__image img {
   transition: transform 1.2s ease;
   border-radius: 2%;
@@ -932,6 +937,9 @@ body {
   left: 0;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.gallery__image.active {
+  display: block;
 }
 .gallery .modal {
   border-radius: 3%;
@@ -1904,6 +1912,7 @@ body {
 }
 
 .faq__container {
+  transition: all 0.2s ease;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 1.875rem;

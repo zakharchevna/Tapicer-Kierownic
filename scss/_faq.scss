@@ -1,6 +1,7 @@
 .faq {
 
   &__container {
+    transition: all 0.2s ease;
       display: grid;
       grid-template-columns: 1fr;
       row-gap: rem(30);

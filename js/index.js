@@ -45,12 +45,15 @@ function Gallery(gallery) {
 
   function showNextImage() {
     const index = images.findIndex(img => img === currentImage);
+		currentImage.parentElement.classList.remove("active");
     const nextIndex = (index + 1) % images.length;
+		// images[nextIndex].classList.add("active");
     showImage(images[nextIndex]);
   }
 
   function showPrevImage() {
     const index = images.findIndex(img => img === currentImage);
+		currentImage.parentElement.classList.remove("active");
     const prevIndex = (index - 1 + images.length) % images.length;
     showImage(images[prevIndex]);
   }
@@ -63,6 +66,8 @@ function Gallery(gallery) {
     }
     modal.querySelector('img').src = el.src;
     currentImage = el;
+		console.dir(currentImage);
+		currentImage.parentElement.classList.add("active");
     nextImage = images[(images.indexOf(currentImage) + 1) % images.length];
     previousImage = images[(images.indexOf(currentImage) - 1 + images.length) % images.length];
     openModal();

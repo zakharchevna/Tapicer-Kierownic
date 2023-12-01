@@ -64,6 +64,11 @@
     // box-shadow: 5px 5px 25px #045454;
     box-shadow: 5px 5px 25px $main-color;
     }
+    @media(max-width: 425px) {
+      & {
+        display: none;
+      }
+    }
     img {
       transition: transform 1.2s ease;
       border-radius: 2%;
@@ -73,6 +78,9 @@
       top: 0;
       left: 0;
       object-fit: cover;
+    }
+    &.active {
+      display: block;
     }
   }
   .modal {
